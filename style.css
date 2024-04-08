@@ -1,0 +1,141 @@
+/*defini a familia da fonte que utilizei*/
+@font-face {
+    font-family: helvetica;
+    src: url(./fonts/helvetica.otf);
+}
+
+body {
+    font-family: helvetica;
+    background-color: #F1F7ED;
+}
+
+/*usei flex display para setar a o menu de forma que ficassem um ao lado do outro*/
+nav {
+    display: flex;
+    
+}
+
+.logo {
+    width: 30%;
+    padding-left: 50px;
+    color: #7CA982;
+    font-size: 30px;
+}
+
+ul {
+    display: flex;
+    justify-content: center; /*posiciona os elementos centralizados horizontalmente*/
+    align-items: center; /*posiciona os elementos centralizados verticalmente*/
+    list-style: none; /*remove as bolinhas da lista, bullet points*/
+    width: 70%;
+
+}
+
+li {
+    flex: 1; /*configura todos os elementos da lista com a mesma largura */
+    font-size: 30px;
+}
+
+a {
+    color: #7CA982;
+    text-decoration: none; /* removeu a underline da a tag*/
+}
+/*pagina index*/
+.introduction {
+    display: flex;
+}
+
+.introduction .text-wrapper {
+    width: 30%;
+    display: flex;
+    flex-direction: column; /* configura os itens flex abaixo um do outro*/
+    padding-left: 10%;
+    padding-top: 10%;
+}
+
+.introduction .img-wrapper {
+    width: 70%;
+}
+
+img{
+    width: 100%;
+}
+
+.text-wrapper h1{
+    color: #7CA982;
+    font-size: 80px;
+    margin: 0; /* margem excluida para melhoramento estetico e melhor disposicao do texto acima e abaixo */
+}
+
+.text-wrapper h2{
+    color: #243E36;
+    font-size: 2rem; /* medida utilizada ao inves de px pois tive problemas ao testar em outros computadores, e esta foi a versao que melhor se adaptou */
+}
+
+.text-wrapper span{
+    color: #C2A83E;
+}
+
+/*pagina about*/
+.about {
+    display: flex;
+}
+
+.about .text-wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+
+.about .img-wrapper {
+    width: 50%;
+}
+
+.about p{
+    margin-right: 30%;
+}
+
+
+/*pagina work*/
+
+.work {
+    padding: 50px;
+}
+
+.work h1 {
+    text-align: center;
+}
+
+.work .videos {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+/*pagina contact*/
+
+.contact {
+    padding: 50px;
+}
+
+.contact h1 {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact iframe {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.contact .text-wrapper {
+    text-align: center;
+}
+
+/*adiciona cor dourada ao passar o rato sobre a tag a*/
+.contact a:hover {
+    color: #C2A83E;
+}

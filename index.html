@@ -4,34 +4,26 @@
     <meta charset="UFT-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header>
-      <h1>Naara Freire</h1>
-      <h3><em> I convert coffee into design </em></h3>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="./about.html" target="_self">about me</a></li>
-        <li><a href="./work.html" target="_self">my work</a></li>
-        <li>
-          <a href="mailto:euraquelpanda@gmail.com" target="_self">
-            send me an e-mail :)</a
-          >
-        </li>
-      </ul>
-    </nav>
-    <p>Welcome to my main page</p>
-
-    <p>
-      In this website you can check out more about my work and contact me, feel
-      free to explore!
-    </p>
-
-    <img src="./images/after sun.png" alt="poster" width="400" />
-
-    <a href="https://www.instagram.com/artistoteles_/" target="_blank"
-      >My instagram</a
-    >
-  </body>
+    <main>
+      <nav> <!-- barra de navegacao -->
+        <h1 class="logo">Portfolio.</h1>
+        <ul> <!--agrupa e lista os itens da barra de navegacao -->
+          <li><a href="./index.html" target="_self">Home</a></li>
+          <li><a href="./about.html" target="_self">Who am I?</a></li>
+          <li><a href="./work.html" target="_self">Works</a></li>
+          <li><a href="./contact.html" target="_self">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="introduction">  <!--classes foram usadas para setorizar os conteudos das paginas -->
+        <div class="text-wrapper">  <!--Agrupa elementos textuais a esquerda -->
+          <h2>Hey, my name is</h2>
+          <h1>Naara Freire</h1>
+          <h2>and I'm a <span>Multimedia Designer</span></h2> <!--Span fez com que uma parte do texto tivesse uma cor diferente -->
+        </div>
+        <div class="img-wrapper"><img src="./images/zucapng.png" alt="logo"></div> <!--Agrupa imagem a direita -->
+      </div>
+    </body>
 </html>
