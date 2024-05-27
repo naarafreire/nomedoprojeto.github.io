@@ -4,15 +4,26 @@
     src: url(./fonts/helvetica.otf);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+  
+
 body {
     font-family: helvetica;
     background-color: #F1F7ED;
+    margin: 0px;
+}
+
+p {
+    font-size: 32px;
 }
 
 /*usei flex display para setar a o menu de forma que ficassem um ao lado do outro*/
 nav {
     display: flex;
-    
+    position: fixed;
+    width: 100%;
 }
 
 .logo {
@@ -36,6 +47,11 @@ li {
     font-size: 30px;
 }
 
+.active a {
+    color: #C2A83E;
+    text-decoration: underline;
+}
+
 a {
     color: #7CA982;
     text-decoration: none; /* removeu a underline da a tag*/
@@ -50,15 +66,19 @@ a {
     display: flex;
     flex-direction: column; /* configura os itens flex abaixo um do outro*/
     padding-left: 10%;
-    padding-top: 10%;
+    justify-content: center;
 }
 
 .introduction .img-wrapper {
     width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-img{
+.introduction .img-wrapper img{
     width: 100%;
+    height: max-content;
 }
 
 .text-wrapper h1{
@@ -82,7 +102,7 @@ img{
 }
 
 .about .text-wrapper {
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     padding-left: 10%;
@@ -90,7 +110,8 @@ img{
 }
 
 .about .img-wrapper {
-    width: 50%;
+    width: 30%;
+    padding-left: 10%;
 }
 
 .about p{
@@ -116,6 +137,35 @@ img{
     padding-top: 50px;
 }
 
+.work .imgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work .imgs div {
+    width: 45vw;
+    height: 40vh;
+    margin: 1vw;
+    background-position: center;
+    background-size: cover;
+}
+
+.work .imgs .img-1 {
+    background-image: url('./images/projects/1.png');
+}
+
+.work .imgs .img-2 {
+    background-image: url('./images/projects/2.png');
+}
+
+.work .imgs .img-3 {
+    background-image: url('./images/projects/3.png');
+}
+
+.work .imgs .img-4 {
+    background-image: url('./images/projects/4.png');
+}
+
 /*pagina contact*/
 
 .contact {
@@ -139,4 +189,13 @@ img{
 /*adiciona cor dourada ao passar o rato sobre a tag a*/
 .contact a:hover {
     color: #C2A83E;
+}
+
+.section {
+    height: 90vh;
+}
+
+img {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }
