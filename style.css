@@ -388,8 +388,7 @@ img {
 
 .project-content {
     padding: 50px;
-    padding-top: 250px;
-    height: 100vh;
+    padding-top: 100px;
     display: flex;
 
     @media only screen and (max-width: 1200px) {
@@ -415,6 +414,9 @@ img {
     text-align: center;
     flex: 1;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-content .text-container p, .project-content .text-container li {
@@ -423,12 +425,8 @@ img {
 }
 
 .project-content .text-container h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 500;
-
-    @media only screen and (min-width: 1200px) {
-      font-size: 5rem;
-    }
 }
 
 .project-content .text-container h2 {
@@ -444,6 +442,10 @@ img {
     justify-content: center;
     padding: 0px;
     width: 100%;
+}
+
+.project-content .text-container h1, .project-content .text-container h2, .project-content .text-container p, .project-content .text-container ul {
+  margin: 0px;
 }
 
 .daterate {
