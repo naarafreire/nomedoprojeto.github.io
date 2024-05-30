@@ -249,6 +249,10 @@ img {
     position: relative;
     height: 2350px;
     padding-top: 300px;
+
+    @media only screen and (max-width: 1199px) {
+      padding-top: 100px;
+    }
 }
 
 .work h1 {
@@ -292,6 +296,13 @@ img {
 .work .card-wrapper {
     opacity: 0;
     transition: opacity 2s ease-in-out;
+
+    @media only screen and (max-width: 1199px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
 }
 
 .card:hover a > .card-background {
@@ -328,7 +339,9 @@ img {
 }
 
 .work .card:hover p {
+  @media only screen and (min-width: 1200px) {
     animation: appearText .5s linear forwards;
+  }
 }
 
 .work .card-1 {
@@ -402,8 +415,8 @@ img {
       position: relative;
       top: 0px;
       left: 0px;
-      width: 250px;
-      height: 250px;
+      width: 325px;
+      height: 325px;
     }
 }
 
@@ -413,6 +426,13 @@ img {
     z-index: 0;
     top: 1600px;
     right: 0;
+
+    @media only screen and (max-width: 1199px) {
+      position: relative;
+      top: 0px;
+      width: 375px;
+      height: 250px;
+    }
 }
 
 .work .card-7 {
@@ -421,6 +441,14 @@ img {
     z-index: 0;
     top: 1400px;
     left: 10px;
+
+    @media only screen and (max-width: 1199px) {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      height: 375px;
+      width: 225px;
+    }
 }
 
 .work .card-8 {
@@ -429,6 +457,14 @@ img {
     z-index: 0;
     right: 30px;
     top: 120px;
+
+    @media only screen and (max-width: 1199px) {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      height: 300px;
+      width: 210px;
+    }
 }
 
 
