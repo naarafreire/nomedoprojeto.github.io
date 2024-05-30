@@ -16,7 +16,7 @@ body, html{
 }
 
 p {
-  font-size: 32px;
+  font-size: 24px;
   color: #243e36;
 }
 
@@ -36,7 +36,7 @@ nav .logo {
   font-size: 30px;
   display:none;
   
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 1200px) {
     display:block;
   }
 }
@@ -49,7 +49,7 @@ nav ul {
   width: 100%;
   padding: 0px;
 
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 1200px) {
     width: 70%;
   }
 }
@@ -60,7 +60,7 @@ nav li {
   display: flex;
   justify-content: center;
 
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 1200px) {
     font-size: 30px;
   }
 }
@@ -82,9 +82,18 @@ a {
 .introduction {
   flex-direction: column-reverse;
 
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 1200px) {
     flex-direction: row;
   }
+}
+
+.introduction h2 {
+  font-weight: 500;
+}
+
+.text-wrapper h2 {
+  color: #243e36;
+  font-size: 2rem; /* medida utilizada ao inves de px pois tive problemas ao testar em outros computadores, e esta foi a versao que melhor se adaptou */
 }
 
 .text-wrapper {
@@ -104,10 +113,10 @@ a {
 }
 
 .img-wrapper img {
-  width: 500px;
+  width: 350px;
 
   @media only screen and (min-width: 1440px) {
-    width: 750px;
+    width: 500px;
   }
 }
 
@@ -138,18 +147,13 @@ a {
   margin: 0; /* margem excluida para melhoramento estetico e melhor disposicao do texto acima e abaixo */
 }
 
-.text-wrapper h2 {
-  color: #243e36;
-  font-size: 2rem; /* medida utilizada ao inves de px pois tive problemas ao testar em outros computadores, e esta foi a versao que melhor se adaptou */
-}
-
 /*pagina about*/
 .about {
   display: flex;
   padding-left: 10%;
   padding-right: 10%;
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 1200px) {
     flex-direction: column;
   }
 }
@@ -163,6 +167,11 @@ a {
 .contact h1 {
   text-align: center;
   padding-bottom: 50px;
+}
+
+.contact h2 {
+  color: #7ca982;
+  font-size: 60px; /* medida utilizada ao inves de px pois tive problemas ao testar em outros computadores, e esta foi a versao que melhor se adaptou */
 }
 
 .contact iframe {
@@ -180,7 +189,12 @@ a {
 }
 
 .section {
-  height: 90vh;
+  padding-bottom: 10vh; 
+
+  @media only screen and (min-width: 1200px) {
+    height: 90vh;
+    padding-bottom: 0px;
+  }
 }
 
 img {
@@ -276,7 +290,7 @@ img {
 .work .card-1 {
     width: 400px;
     height: 650px;
-    margin-top: 300px;
+    top: 300px;
     z-index: 3;
 }
 
@@ -284,7 +298,7 @@ img {
     height: 450px;
     width: 750px;
     z-index: 1;
-    margin-left: 50px;
+    left: 50px;
 }
 
 .work .card-3 {
@@ -299,23 +313,23 @@ img {
     height: 500px;
     width: 500px;
     z-index: 2;
-    margin-left: 100px;
-    margin-top: 800px;
+    left: 100px;
+    top: 800px;
 }
 
 .work .card-5 {
     height: 650px;
     width: 650px;
     z-index: 1;
-    margin-top: 1000px;
-    margin-left: 500px;
+    top: 1000px;
+    left: 500px;
 }
 
 .work .card-6 {
     height: 500px;
     width: 750px;
     z-index: 0;
-    margin-top: 1600px;
+    top: 1600px;
     right: 0;
 }
 
@@ -323,7 +337,7 @@ img {
     height: 750px;
     width: 450px;
     z-index: 0;
-    margin-top: 1400px;
+    top: 1400px;
     left: 10px;
 }
 
@@ -332,8 +346,9 @@ img {
     width: 420px;
     z-index: 0;
     right: 30px;
-    margin-top: 120px;
+    top: 120px;
 }
+
 
 
 @keyframes brightnessAnimation {
@@ -366,7 +381,7 @@ img {
 /*pagina project individual*/
 
 .project-body {
-    @media only screen and (min-width: 901px) {
+    @media only screen and (min-width: 1201px) {
       overflow: hidden;
     }
 }
@@ -377,7 +392,7 @@ img {
     height: 100vh;
     display: flex;
 
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1200px) {
       flex-direction: column;
     }
 }
@@ -411,7 +426,7 @@ img {
     font-size: 3rem;
     font-weight: 500;
 
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 1200px) {
       font-size: 5rem;
     }
 }
