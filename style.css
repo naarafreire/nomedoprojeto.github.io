@@ -140,7 +140,7 @@ a {
 .img-wrapper img {
   width: 350px;
 
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1200px) {
     width: 500px;
   }
 }
@@ -603,10 +603,41 @@ img {
     color: #FFAA00;
 }
 
-.fox-house{
+.fox-house {
     background-color: #F6ECDC;
 }
 
 .fox-house ul li a, .fox-house .logo, .fox-house h1{
     color: #EB6752;
+}
+
+.cardboard-box {
+  background-color: #FFFEF2;
+}
+
+.cardboard-box ul li a, .cardboard-box .logo, .cardboard-box h1{
+  color: #895F1F;
+}
+
+.tutto {
+  background-color: #FFF5F5;
+}
+
+.tutto ul li a, .tutto .logo, .tutto h1{
+  color: #C93F3F;
+}
+
+.i-love-you-so {
+  background-color: #FFEDDB;
+}
+
+.i-love-you-so-qr {
+  padding-left: 37.5%;
+  padding-right: 37.5%;
+  width: 25%!important;
+  background-color: white;
+}
+
+.i-love-you-so ul li a, .i-love-you-so .logo, .i-love-you-so h1{
+  color: #220E0E;
 }
