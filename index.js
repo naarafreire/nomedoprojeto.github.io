@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
 const addScrollAnimation = () => {
     document.addEventListener('scroll', function() {
         const fadeInImages = document.querySelectorAll('img');
+        const fadeInSection = document.querySelector('.card-wrapper');
         const triggerHeight = window.innerHeight * 0.8;
       
-        fadeInImages.forEach((el)=>{
+      [...fadeInImages, fadeInSection].forEach((el)=>{
             const imagePosition = el.getBoundingClientRect().top;
 
             if (imagePosition < triggerHeight) {

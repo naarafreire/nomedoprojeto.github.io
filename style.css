@@ -1,201 +1,355 @@
 /*defini a familia da fonte que utilizei*/
+
 @font-face {
-    font-family: helvetica;
-    src: url(./fonts/helvetica.otf);
+    font-family: neueHaas;
+    src: url(./fonts/NeueHaasDisplay-Mediu.ttf);
+}
+
+:root {
+  --card-width: min(25vw, 300px);
+  --card-aspect: 2 / 3;
+  --font-archivo: "Archivo", sans-serif;
+  --font-clash-display: "Clash Display", sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-  
 
 body {
-    font-family: helvetica;
-    background-color: #F1F7ED;
-    margin: 0px;
+  font-family: neueHaas;
+  background-color: #f1f7ed;
+  margin: 0px;
 }
 
 p {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 /*usei flex display para setar a o menu de forma que ficassem um ao lado do outro*/
 nav {
-    display: flex;
-    position: fixed;
-    width: 100%;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 
 .logo {
-    width: 30%;
-    padding-left: 50px;
-    color: #7CA982;
-    font-size: 30px;
+  width: 30%;
+  padding-left: 50px;
+  color: #7ca982;
+  font-size: 30px;
 }
 
 ul {
-    display: flex;
-    justify-content: center; /*posiciona os elementos centralizados horizontalmente*/
-    align-items: center; /*posiciona os elementos centralizados verticalmente*/
-    list-style: none; /*remove as bolinhas da lista, bullet points*/
-    width: 70%;
-
+  display: flex;
+  justify-content: center; /*posiciona os elementos centralizados horizontalmente*/
+  align-items: center; /*posiciona os elementos centralizados verticalmente*/
+  list-style: none; /*remove as bolinhas da lista, bullet points*/
+  width: 70%;
 }
 
 li {
-    flex: 1; /*configura todos os elementos da lista com a mesma largura */
-    font-size: 30px;
+  flex: 1; /*configura todos os elementos da lista com a mesma largura */
+  font-size: 30px;
 }
 
 .active a {
-    color: #C2A83E;
-    text-decoration: underline;
+  color: #c2a83e;
+  text-decoration: underline;
 }
 
 a {
-    color: #7CA982;
-    text-decoration: none; /* removeu a underline da a tag*/
+  color: #7ca982;
+  text-decoration: none; /* removeu a underline da a tag*/
 }
 /*pagina index*/
 .introduction {
-    display: flex;
+  display: flex;
 }
 
 .introduction .text-wrapper {
-    width: 30%;
-    display: flex;
-    flex-direction: column; /* configura os itens flex abaixo um do outro*/
-    padding-left: 10%;
-    justify-content: center;
+  width: 30%;
+  display: flex;
+  flex-direction: column; /* configura os itens flex abaixo um do outro*/
+  padding-left: 10%;
+  justify-content: center;
 }
 
 .introduction .img-wrapper {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.introduction .img-wrapper img{
-    width: 100%;
-    height: max-content;
+.introduction .img-wrapper img {
+  width: 100%;
+  height: max-content;
 }
 
-.text-wrapper h1{
-    color: #7CA982;
-    font-size: 80px;
-    margin: 0; /* margem excluida para melhoramento estetico e melhor disposicao do texto acima e abaixo */
+.text-wrapper h1 {
+  color: #7ca982;
+  font-size: 80px;
+  margin: 0; /* margem excluida para melhoramento estetico e melhor disposicao do texto acima e abaixo */
 }
 
-.text-wrapper h2{
-    color: #243E36;
-    font-size: 2rem; /* medida utilizada ao inves de px pois tive problemas ao testar em outros computadores, e esta foi a versao que melhor se adaptou */
+.text-wrapper h2 {
+  color: #243e36;
+  font-size: 2rem; /* medida utilizada ao inves de px pois tive problemas ao testar em outros computadores, e esta foi a versao que melhor se adaptou */
 }
 
-.text-wrapper span{
-    color: #C2A83E;
+.text-wrapper span {
+  color: #c2a83e;
 }
 
 /*pagina about*/
 .about {
-    display: flex;
+  display: flex;
 }
 
 .about .text-wrapper {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 10%;
-    padding-top: 10%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-top: 10%;
 }
 
 .about .img-wrapper {
-    width: 30%;
-    padding-left: 10%;
+  width: 30%;
+  padding-left: 10%;
 }
 
-.about p{
-    margin-right: 30%;
+.about p {
+  margin-right: 30%;
 }
-
 
 /*pagina work*/
 
 .work {
-    padding: 50px;
+  padding: 50px;
 }
 
 .work h1 {
-    text-align: center;
-    padding-bottom: 20px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .work .videos {
-    display: flex;
-    gap: 20px;
-    padding-bottom: 50px;
-    padding-top: 50px;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .work .imgs {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .work .imgs div {
-    width: 45vw;
-    height: 40vh;
-    margin: 1vw;
-    background-position: center;
-    background-size: cover;
+  width: 45vw;
+  height: 40vh;
+  margin: 1vw;
+  background-position: center;
+  background-size: cover;
 }
 
 .work .imgs .img-1 {
-    background-image: url('./images/projects/1.png');
+  background-image: url("./images/projects/1.png");
 }
 
 .work .imgs .img-2 {
-    background-image: url('./images/projects/2.png');
+  background-image: url("./images/projects/2.png");
 }
 
 .work .imgs .img-3 {
-    background-image: url('./images/projects/3.png');
+  background-image: url("./images/projects/3.png");
 }
 
 .work .imgs .img-4 {
-    background-image: url('./images/projects/4.png');
+  background-image: url("./images/projects/4.png");
 }
 
 /*pagina contact*/
 
 .contact {
-    padding: 50px;
+  padding: 50px;
 }
 
 .contact h1 {
-    text-align: center;
-    padding-bottom: 50px;
+  text-align: center;
+  padding-bottom: 50px;
 }
 
 .contact iframe {
-    width: 100%;
-    margin-bottom: 50px;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 .contact .text-wrapper {
-    text-align: center;
+  text-align: center;
 }
 
 /*adiciona cor dourada ao passar o rato sobre a tag a*/
 .contact a:hover {
-    color: #C2A83E;
+  color: #c2a83e;
 }
 
 .section {
-    height: 90vh;
+  height: 90vh;
 }
 
 img {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+/*pagina project*/
+
+.work {
+    background-color: #3C4A3E;
+    height: 200vh;
+    position: relative;
+}
+
+.work h1 {
+    position: absolute;
+    top: -35px;
+    right: 0px;
+    margin: 0px;
+    color: #f1f7ed;
+    font-size: 150px;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.work .content {
+    width: 1200px;
+    padding: 0px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.work .card {
+    position: absolute;
+    box-shadow: 0 70px 63px -60px #494848;
+    transform-style: preserve-3d;
+    transition: transform .05s linear;
+}
+
+.work .card-wrapper {
     opacity: 0;
     transition: opacity 2s ease-in-out;
+}
+
+.card:hover > .thumb {
+    animation: brightnessAnimation .5s linear forwards;
+}
+
+@keyframes brightnessAnimation {
+    0% {
+        filter: brightness(100%);
+    }
+    100% {
+        filter: brightness(20%);
+    }
+}
+
+.card:hover {
+    animation: zIndexAnimation .5s linear forwards;
+    cursor: pointer;
+}
+
+@keyframes zIndexAnimation {
+    0% {
+        z-index: 1;
+    }
+    100% {
+        z-index: 999;
+    }
+}
+
+.work .thumb {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.work p {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 100;
+    transform: translateZ(80px);
+    color: white;
+    padding: 40px;
+    bottom: 0px;
+    opacity: 0%;
+}
+
+.work p span {
+    font-size: 40px;
+}
+
+.work .card:hover p {
+    animation: appearText .5s linear forwards;
+}
+
+@keyframes appearText {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+img {
+    margin: auto;
+    display: block;
+}
+
+.work .card-1 {
+    width: 400px;
+    height: 650px;
+    margin-top: 300px;
+    z-index: 2;
+}
+
+.work .card-2 {
+    height: 450px;
+    width: 750px;
+    z-index: 1;
+    margin-left: 150px;
+    margin-left: 275px;
+}
+
+.work .card-3 {
+    height: 400px;
+    width: 650px;
+    z-index: 1;
+    right: 0px;
+    top: 600px;
+}
+
+.work .card-4 {
+    height: 500px;
+    width: 500px;
+    z-index: 1;
+    margin-left: 100px;
+    margin-top: 800px;
+}
+
+
+.work .card-5 {
+    height: 650px;
+    width: 650px;
+    z-index: 0;
+    margin-top: 1000px;
+    margin-left: 450px;
 }
