@@ -54,6 +54,10 @@ nav ul {
   }
 }
 
+ul {
+  list-style: none; /*remove as bolinhas da lista, bullet points*/
+}
+
 nav li {
   flex: 1; /*configura todos os elementos da lista com a mesma largura */
   font-size: 20px;
@@ -81,19 +85,16 @@ a {
 
 .introduction {
   flex-direction: column-reverse;
+  padding-top: 100px;
 
   @media only screen and (min-width: 1200px) {
     flex-direction: row;
+    padding-top: 0px;
   }
 }
 
 .introduction h2 {
   font-weight: 500;
-}
-
-.text-wrapper h2 {
-  color: #243e36;
-  font-size: 2rem; /* medida utilizada ao inves de px pois tive problemas ao testar em outros computadores, e esta foi a versao que melhor se adaptou */
 }
 
 .text-wrapper {
@@ -102,6 +103,30 @@ a {
   padding-left: 10%;
   justify-content: center;
   flex: 1;
+
+  @media only screen and (max-width: 1199px) {
+    padding: 0px;
+    text-align: center;
+  }
+}
+
+.text-wrapper h1 {
+  color: #7ca982;
+  font-size: 80px;
+  margin: 0; /* margem excluida para melhoramento estetico e melhor disposicao do texto acima e abaixo */
+
+  @media only screen and (max-width: 1199px) {
+    font-size: 40px;
+  }
+}
+
+.text-wrapper h2 {
+  color: #243e36;
+  font-size: 2rem; /* medida utilizada ao inves de px pois tive problemas ao testar em outros computadores, e esta foi a versao que melhor se adaptou */
+
+  @media only screen and (max-width: 1199px) {
+    font-size: 1rem;
+  }
 }
 
 .img-wrapper {
@@ -141,12 +166,6 @@ a {
     color: #9392C5;
 }
 
-.text-wrapper h1 {
-  color: #7ca982;
-  font-size: 80px;
-  margin: 0; /* margem excluida para melhoramento estetico e melhor disposicao do texto acima e abaixo */
-}
-
 /*pagina about*/
 .about {
   display: flex;
@@ -155,6 +174,18 @@ a {
 
   @media only screen and (max-width: 1200px) {
     flex-direction: column;
+  }
+}
+
+.about h1 {
+  @media only screen and (max-width: 1199px) {
+    padding-top: 20px;
+  }
+}
+
+.about p {
+  @media only screen and (max-width: 1199px) {
+    font-size: 1rem;
   }
 }
 
@@ -172,6 +203,10 @@ a {
 .contact h2 {
   color: #7ca982;
   font-size: 60px; /* medida utilizada ao inves de px pois tive problemas ao testar em outros computadores, e esta foi a versao que melhor se adaptou */
+
+  @media only screen and (max-width: 1199px) {
+    font-size: 2rem;
+  }
 }
 
 .contact iframe {
@@ -225,6 +260,11 @@ img {
     font-size: 150px;
     z-index: 2;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 1199px) {
+      font-size: 80px;
+      top: -20px;
+    }
 }
 
 .work .content {
@@ -243,6 +283,10 @@ img {
     box-shadow: 0 70px 63px -60px #494848;
     transform-style: preserve-3d;
     transition: transform .05s linear;
+
+    @media only screen and (max-width: 1199px) {
+      position: relative;
+    }
 }
 
 .work .card-wrapper {
@@ -292,6 +336,14 @@ img {
     height: 650px;
     top: 300px;
     z-index: 3;
+
+    @media only screen and (max-width: 1199px) {
+      position: relative;
+      height: 0px;
+      top: 0px;
+      width: 200px;
+      height: 325px;
+    }
 }
 
 .work .card-2 {
@@ -299,6 +351,13 @@ img {
     width: 750px;
     z-index: 1;
     left: 50px;
+
+    @media only screen and (max-width: 1199px) {
+      position: relative;
+      left: 0px;
+      width: 375px;
+      height: 225px;
+    }
 }
 
 .work .card-3 {
@@ -307,6 +366,13 @@ img {
     z-index: 1;
     right: 0px;
     top: 600px;
+
+    @media only screen and (max-width: 1199px) {
+      position: relative;
+      top: 0px;
+      width: 325px;
+      height: 200px;
+    }
 }
 
 .work .card-4 {
@@ -315,6 +381,14 @@ img {
     z-index: 2;
     left: 100px;
     top: 800px;
+
+    @media only screen and (max-width: 1199px) {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      width: 250px;
+      height: 250px;
+    }
 }
 
 .work .card-5 {
@@ -323,6 +397,14 @@ img {
     z-index: 1;
     top: 1000px;
     left: 500px;
+
+    @media only screen and (max-width: 1199px) {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      width: 250px;
+      height: 250px;
+    }
 }
 
 .work .card-6 {
@@ -425,7 +507,7 @@ img {
 }
 
 .project-content .text-container h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 500;
 }
 
@@ -464,9 +546,9 @@ img {
     color: #1A1850;
 }
 
-.happiness iframe {
+.project-content iframe {
     width: 100%;
-    height: 750px;
+    height: 550px;
 }
 
 .so-many-tools {
