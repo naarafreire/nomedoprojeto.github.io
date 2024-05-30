@@ -3,12 +3,12 @@ const sections = document.querySelectorAll(".section");
 
 document.addEventListener("DOMContentLoaded", function () {
   addScrollAnimation();
+  startTextAnimation(0);
 
   window.addEventListener("scroll", updateMenuHighlight);
 
   // Initial check
   updateMenuHighlight();
-  StartTextAnimation(0);
 });
 
 const addScrollAnimation = () => {
@@ -52,7 +52,7 @@ function updateMenuHighlight() {
 
 function typeWriter(text, i, fnCallback) {
   if (i < text.length) {
-    document.querySelector(".word1").innerHTML =
+    document.querySelector(".animated-text").innerHTML =
       text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
 
     setTimeout(function () {
@@ -64,17 +64,17 @@ function typeWriter(text, i, fnCallback) {
   }
 }
 
-function StartTextAnimation(i) {
+function startTextAnimation(i) {
   var dataText = ["UI/UX Designer", "3D Artist", "Multimedia Designer"];
 
   if (typeof dataText[i] == "undefined") {
     setTimeout(function () {
-      StartTextAnimation(0);
+      startTextAnimation(0);
     }, 2000);
   }
   else if (i < dataText[i].length) {
     typeWriter(dataText[i], 0, function () {
-      StartTextAnimation(i + 1);
+      startTextAnimation(i + 1);
     });
   }
 }

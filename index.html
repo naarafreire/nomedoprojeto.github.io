@@ -5,6 +5,8 @@
   <meta charset="UFT-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./fonts/font.css" />
   <link rel="stylesheet" href="./style.css" />
 </head>
 
@@ -23,21 +25,22 @@
       <!--classes foram usadas para setorizar os conteudos das paginas -->
       <div class="text-wrapper"> <!--Agrupa elementos textuais a esquerda -->
         <h2>Hey, my name is</h2>
-        <h1 class="my-name">N<span class="yellow">a</span><span class="red">a</span>r<span class="blue">a</span> F<span class="yellow">r</span>e<span class="blue">i</span>r<span class="red">e</span></h1>
-        <h2><span>and I'm a </span><div class="word1">Multimedia Designer</div>
+        <h1 class="my-name">N<span class="yellow">a</span><span class="red">a</span>r<span class="blue">a</span> F<span
+            class="yellow">r</span>e<span class="blue">i</span>r<span class="red">e</span></h1>
+        <h2><span>and I'm a </span>
+          <span class="animated-text">Multimedia Designer</span>
         </h2> <!--Span fez com que uma parte do texto tivesse uma cor diferente -->
       </div>
-      <div class="img-wrapper"><img class="zuca-image" src="./images/zucapng.png" alt="logo"></div> <!--Agrupa imagem a direita -->
+      <div class="img-wrapper"><img class="zuca-image" src="./images/zucapng.png" alt="logo"></div>
+      <!--Agrupa imagem a direita -->
     </div>
     <div class="section about" id="about"> <!--classes foram usadas para setorizar os conteudos das paginas -->
       <div class="img-wrapper"><img src="./images/eupng.png" alt="logo"></div>
       <div class="text-wrapper">
         <h1>About me</h1>
-        <p>Hello, I'm a junior Multimedia Designer born in Brazil and currently based in Portugal. I graduated from
-          ESAD.CR in 2024 and I find immense joy in pushing the boundaries of imagination and bringing my ideas to life
-          through design. Being born in Brazil has infused a rich cultural perspective into my work, and I carry that
-          diversity with pride. It's not just about creating visually appealing designs for me; it's about crafting
-          experiences that resonate with people on a deeper level.</p>
+        <p>I am a multimedia designer with a passion for 3D and UI/UX, dedicated to solving problems creatively. I have
+          a keen interest in new technologies, especially VR/AR, and love designing for children, including creating
+          illustrations and writing stories.</p>
       </div>
     </div>
     <div class="section work" id="work"> <!--classes foram usadas para setorizar os conteudos das paginas -->
@@ -45,54 +48,79 @@
       <div class="work content">
         <div class="card-wrapper">
           <div class="card card-1">
-            <div class="thumb" style="background-image: url(./images/projects/1.png)"></div>
-            <p><span>Trash Island</span><br>Trash Island is an immersive VR game designed to teach kids the
-              importance of recycling through interactive adventures on a virtual island polluted with waste.</p>
+            <a href="./projects/trash-island.html">
+              <div class="card-background" style="background-image: url(./images/projects/1.png)"></div>
+              <p><span>Trash Island</span><br>Trash Island is an immersive VR game designed to teach kids the
+                importance of recycling through interactive adventures on a virtual island polluted with waste.</p>
+            </a>
           </div>
           <div class="card card-2">
-            <div class="thumb" style="background-image: url(./images/projects/2.png)"></div>
-            <p><span>DateRate</span><br>DateRate is a user-friendly app that helps people discover new spots to go
-              and allows them to rate and share their experiences.</p>
+            <a href="./projects/daterate.html">
+              <div class="card-background" style="background-image: url(./images/projects/2.png)"></div>
+              <p><span>DateRate</span><br>DateRate is a user-friendly app that helps people discover new spots to go
+                and allows them to rate and share their experiences.</p>
+            </a>
           </div>
           <div class="card card-3">
-            <div class="thumb" style="background-image: url(./images/projects/3.png)"></div>
-            <p><span>Fox's House</span><br>One small isometric kitchen and the Charming Mr. Fox, modeled in Blender, designed for children's animation.</p>
+            <a href="./projects/fox-house.html">
+              <div class="card-background" style="background-image: url(./images/projects/3.png)"></div>
+              <p><span>Fox's House</span><br>One small isometric kitchen and the Charming Mr. Fox, modeled in Blender,
+                designed for children's animation.</p>
+            </a>
           </div>
           <div class="card card-4">
-            <div class="thumb" style="background-image: url(./images/projects/4.png)"></div>
-            <p><span>Cardboard Box</span><br>This 3D project of a cardboard box, was created to practice and analyze texture behavior for a personal project.</p>
+            <div class="card-background" style="background-image: url(./images/projects/4.png)"></div>
+            <p><span>Cardboard Box</span><br>This 3D project of a cardboard box, was created to practice and analyze
+              texture behavior for a personal project.</p>
           </div>
           <div class="card card-5">
-            <div class="thumb" style="background-image: url(./images/projects/5.png)"></div>
-            <p><span>Too Many Tools, Too Little Time</span><br>"Too Many Tools, Too Little Time" is an AR project designed to provoke reflection on how relentless media consumption diminishes our intellectual engagement.</p>
+            <a href="./projects/so-many-tools.html">
+              <div class="card-background" style="background-image: url(./images/projects/5.png)"></div>
+              <p><span>So Many Tools, So Little Time</span><br>"So Many Tools, So Little Time" is an AR project
+                designed to provoke reflection on how relentless media consumption diminishes our intellectual
+                engagement.
+              </p>
+            </a>
           </div>
           <div class="card card-6">
-            <div class="thumb" style="background-image: url(./images/projects/6.png)"></div>
-            <p><span>Tutto</span><br>The redesign of the game Tutto for a personal project aims to infuse it with a fresh, playful aesthetic to appeal more effectively to children.</p>
+            <div class="card-background" style="background-image: url(./images/projects/6.png)"></div>
+            <p><span>Tutto</span><br>The redesign of the game Tutto for a personal project aims to infuse it with a
+              fresh, playful aesthetic to appeal more effectively to children.</p>
           </div>
           <div class="card card-7">
-            <div class="thumb" style="background-image: url(./images/projects/7.png)"></div>
-            <p><span>I Love You So</span> <br>The Spotify Canvas Animation for "I Love You So," crafted as part of a university project, integrates visuals to amplify the song's essence</p>
+            <div class="card-background" style="background-image: url(./images/projects/7.png)"></div>
+            <p><span>I Love You So</span> <br>The Spotify Canvas Animation for "I Love You So," crafted as part of a
+              university project, integrates visuals to amplify the song's essence</p>
           </div>
           <div class="card card-8">
-            <div class="thumb" style="background-image: url(./images/projects/8.png)"></div>
-            <p><span>Happiness</span><br>The Happiness Festival AR poster features a serotonin molecule as its central graphic element, modeled and animated in Blender to elevate user engagement and evoke a sense of connection.</p>
+            <a href="./projects/happiness.html">
+              <div class="card-background" style="background-image: url(./images/projects/8.png)"></div>
+              <p><span>Happiness</span><br>The Happiness Festival AR poster features a serotonin molecule as its central
+                graphic element, modeled and animated in Blender to elevate user engagement and evoke a sense of
+                connection.</p>
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <div class="section contact" id="contact">  <!--classes foram usadas para setorizar os conteudos das paginas -->
+    <div class="section contact" id="contact"> <!--classes foram usadas para setorizar os conteudos das paginas -->
       <div class="text-wrapper">
-        <h1>Find me!</h1>
+        <h1>Find me</h1>
         <!--localizacao retirada do Google maps -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3082.955585412492!2d-9.141510124225196!3d39.4025108716206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd18b3a4441b2e53%3A0x196879cf9e932b4d!2sSILOS%20Contentor%20Criativo!5e0!3m2!1spt-PT!2spt!4v1712611978298!5m2!1spt-PT!2spt" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3082.955585412492!2d-9.141510124225196!3d39.4025108716206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd18b3a4441b2e53%3A0x196879cf9e932b4d!2sSILOS%20Contentor%20Criativo!5e0!3m2!1spt-PT!2spt!4v1712611978298!5m2!1spt-PT!2spt"
+          height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="text-wrapper">
-        <h1>Contact me!</h1>
+        <h1>Contact me</h1>
         <!--Redireciona o cliente para o email ao clicar -->
         <h2><a href="mailto:euraquelpanda@gmail.com">euraquelpanda@gmail.com</a></h2>
+        <h2><a href="https://www.instagram.com/zuca_designer/" target="_blank"><i class="fa-brands fa-instagram"></i>
+            zuca_designer</a></h2>
       </div>
     </div>
     <script src="./index.js"></script>
 </body>
+
 </html>

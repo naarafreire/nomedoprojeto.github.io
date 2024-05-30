@@ -1,29 +1,23 @@
 /*defini a familia da fonte que utilizei*/
 
-@font-face {
-    font-family: neueHaas;
-    src: url(./fonts/NeueHaasDisplay-Mediu.ttf);
-}
-
-:root {
-  --card-width: min(25vw, 300px);
-  --card-aspect: 2 / 3;
-  --font-archivo: "Archivo", sans-serif;
-  --font-clash-display: "Clash Display", sans-serif;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: neueHaas;
+  font-family: 'Neue Haas Grotesk Display Pro';
+  letter-spacing: 1px;
   background-color: #f1f7ed;
-  margin: 0px;
+}
+
+body, html{
+  margin:0;
+  padding:0;
 }
 
 p {
   font-size: 32px;
+  color: #243e36;
 }
 
 /*usei flex display para setar a o menu de forma que ficassem um ao lado do outro*/
@@ -32,29 +26,46 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 999;
+  font-weight: 500;
 }
 
-.logo {
+nav .logo {
   width: 30%;
   padding-left: 50px;
   color: #7ca982;
   font-size: 30px;
+  display:none;
+  
+  @media only screen and (min-width: 900px) {
+    display:block;
+  }
 }
 
-ul {
+nav ul {
   display: flex;
   justify-content: center; /*posiciona os elementos centralizados horizontalmente*/
   align-items: center; /*posiciona os elementos centralizados verticalmente*/
   list-style: none; /*remove as bolinhas da lista, bullet points*/
-  width: 70%;
+  width: 100%;
+  padding: 0px;
+
+  @media only screen and (min-width: 900px) {
+    width: 70%;
+  }
 }
 
-li {
+nav li {
   flex: 1; /*configura todos os elementos da lista com a mesma largura */
-  font-size: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (min-width: 900px) {
+    font-size: 30px;
+  }
 }
 
-.active a {
+nav .active a {
   color: #c2a83e;
 }
 
@@ -62,33 +73,45 @@ a {
   color: #7ca982;
   text-decoration: none; /* removeu a underline da a tag*/
 }
+
 /*pagina index*/
-.introduction {
+.introduction, .about {
   display: flex;
 }
 
-.introduction .text-wrapper {
-  width: 30%;
+.introduction {
+  flex-direction: column-reverse;
+
+  @media only screen and (min-width: 900px) {
+    flex-direction: row;
+  }
+}
+
+.text-wrapper {
   display: flex;
   flex-direction: column; /* configura os itens flex abaixo um do outro*/
   padding-left: 10%;
   justify-content: center;
+  flex: 1;
 }
 
-.introduction .img-wrapper {
-  width: 70%;
+.img-wrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  flex: 1;
+  align-items: center;
 }
 
-.introduction .img-wrapper img {
-  width: 100%;
-  height: max-content;
+.img-wrapper img {
+  width: 500px;
+
+  @media only screen and (min-width: 1440px) {
+    width: 750px;
+  }
 }
 
-.introduction .word1 {
-    display: inline;
+.introduction .animated-text {
     margin-left: 10px;
     color: #c2a83e;
 }
@@ -104,7 +127,6 @@ a {
 .my-name:hover > .red {
     color: #AD6D64;
 }
-
 
 .my-name:hover > .blue {
     color: #9392C5;
@@ -124,71 +146,12 @@ a {
 /*pagina about*/
 .about {
   display: flex;
-}
-
-.about .text-wrapper {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
   padding-left: 10%;
-  padding-top: 10%;
-}
+  padding-right: 10%;
 
-.about .img-wrapper {
-  width: 30%;
-  padding-left: 10%;
-}
-
-.about p {
-  margin-right: 30%;
-  color: #243e36;
-}
-
-/*pagina work*/
-
-.work {
-  padding: 50px;
-}
-
-.work h1 {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.work .videos {
-  display: flex;
-  gap: 20px;
-  padding-bottom: 50px;
-  padding-top: 50px;
-}
-
-.work .imgs {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.work .imgs div {
-  width: 45vw;
-  height: 40vh;
-  margin: 1vw;
-  background-position: center;
-  background-size: cover;
-}
-
-.work .imgs .img-1 {
-  background-image: url("./images/projects/1.png");
-}
-
-.work .imgs .img-2 {
-  background-image: url("./images/projects/2.png");
-}
-
-.work .imgs .img-3 {
-  background-image: url("./images/projects/3.png");
-}
-
-.work .imgs .img-4 {
-  background-image: url("./images/projects/4.png");
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 /*pagina contact*/
@@ -209,9 +172,9 @@ a {
 
 .contact .text-wrapper {
   text-align: center;
+  padding-left: 0px;
 }
 
-/*adiciona cor dourada ao passar o rato sobre a tag a*/
 .contact a:hover {
   color: #c2a83e;
 }
@@ -225,7 +188,12 @@ img {
   transition: opacity 2s ease-in-out;
 }
 
-/*pagina project*/
+.fa-instagram {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/*pagina work*/
 
 .work {
     background-color: #3C4A3E;
@@ -246,11 +214,14 @@ img {
 }
 
 .work .content {
-    width: 1200px;
     padding: 0px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+
+    @media only screen and (min-width: 1200px) {
+      width: 1200px;
+    }
 }
 
 .work .card {
@@ -265,17 +236,8 @@ img {
     transition: opacity 2s ease-in-out;
 }
 
-.card:hover > .thumb {
+.card:hover a > .card-background {
     animation: brightnessAnimation .5s linear forwards;
-}
-
-@keyframes brightnessAnimation {
-    0% {
-        filter: brightness(100%);
-    }
-    100% {
-        filter: brightness(20%);
-    }
 }
 
 .card:hover {
@@ -283,16 +245,7 @@ img {
     cursor: pointer;
 }
 
-@keyframes zIndexAnimation {
-    0% {
-        z-index: 1;
-    }
-    100% {
-        z-index: 999;
-    }
-}
-
-.work .thumb {
+.work .card-background {
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -313,24 +266,11 @@ img {
 
 .work p span {
     font-size: 40px;
+    font-weight: 800;
 }
 
 .work .card:hover p {
     animation: appearText .5s linear forwards;
-}
-
-@keyframes appearText {
-    0% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-img {
-    margin: auto;
-    display: block;
 }
 
 .work .card-1 {
@@ -393,4 +333,145 @@ img {
     z-index: 0;
     right: 30px;
     margin-top: 120px;
+}
+
+
+@keyframes brightnessAnimation {
+  0% {
+      filter: brightness(100%);
+  }
+  100% {
+      filter: brightness(20%);
+  }
+}
+
+@keyframes zIndexAnimation {
+  0% {
+      z-index: 1;
+  }
+  100% {
+      z-index: 999;
+  }
+}
+
+@keyframes appearText {
+  0% {
+      opacity: 0%;
+  }
+  100% {
+      opacity: 100%;
+  }
+}
+
+/*pagina project individual*/
+
+.project-body {
+    @media only screen and (min-width: 901px) {
+      overflow: hidden;
+    }
+}
+
+.project-content {
+    padding: 50px;
+    padding-top: 250px;
+    height: 100vh;
+    display: flex;
+
+    @media only screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+}
+
+.project-content img {
+    opacity: 1;
+}
+
+.project-content .images-container{
+    overflow: auto;
+    max-height: 80vh;
+    flex: 2;
+}
+
+.project-content .images-container img{
+    width: 100%;
+}
+
+.project-content .text-container{
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.project-content .text-container p, .project-content .text-container li {
+    font-size: 1rem;
+    color: #676666;
+}
+
+.project-content .text-container h1 {
+    font-size: 3rem;
+    font-weight: 500;
+
+    @media only screen and (min-width: 900px) {
+      font-size: 5rem;
+    }
+}
+
+.project-content .text-container h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #555454;
+}
+
+.project-content .text-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    width: 100%;
+}
+
+.daterate {
+    background-color: #F6EEED;
+}
+
+.daterate ul li a, .daterate .logo, .daterate h1{
+    color: #FF7859;
+}
+
+.happiness {
+    background-color: #FAFAFA;
+}
+
+.happiness ul li a, .happiness .logo, .happiness h1{
+    color: #1A1850;
+}
+
+.happiness iframe {
+    width: 100%;
+    height: 750px;
+}
+
+.so-many-tools {
+    background-color: #FAFAFA;
+}
+
+.so-many-tools ul li a, .so-many-tools .logo, .so-many-tools h1{
+    color: #040505;
+}
+
+.trash-island {
+    background-color: #EFFFF9;
+}
+
+.trash-island ul li a, .trash-island .logo, .trash-island h1{
+    color: #FFAA00;
+}
+
+.fox-house{
+    background-color: #F6ECDC;
+}
+
+.fox-house ul li a, .fox-house .logo, .fox-house h1{
+    color: #EB6752;
 }
