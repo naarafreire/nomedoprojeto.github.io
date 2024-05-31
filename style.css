@@ -65,7 +65,7 @@ nav li {
   justify-content: center;
 
   @media only screen and (min-width: 1200px) {
-    font-size: 30px;
+    font-size: 30px; /* muda o tamanho da fonte para dispositivos a partir de 1200px de largura*/
   }
 }
 
@@ -104,7 +104,7 @@ a {
   justify-content: center;
   flex: 1;
 
-  @media only screen and (max-width: 1199px) {
+  @media only screen and (max-width: 1199px) {  /* muda o tamanho da fonte para dispositivos até  1200px de largura*/
     padding: 0px;
     text-align: center;
   }
@@ -132,8 +132,8 @@ a {
 .img-wrapper {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  flex: 1;
+  flex-direction: column; /* organiza os elemntos do image-wrapper em colunas, um ao lado do outro */
+  flex: 1; /* posiciona a largura do img-wrapper*/
   align-items: center;
 }
 
@@ -147,18 +147,18 @@ a {
 
 .introduction .animated-text {
     margin-left: 10px;
-    color: #c2a83e;
+    color: #c2a83e; 
 }
 
 .zuca-image {
-    opacity: 1;
+    opacity: 1; /* desativa animação de surgimento de imagem, deixando-a a mostra sem que seja preciso dar scroll*/
 }
 
-.my-name:hover > .yellow {
+.my-name:hover > .yellow { /* se der hover sobre o meu nome, os elementos da classe yellow mudam sua cor para amarelo*/
     color: #C2A83E;
 }
 
-.my-name:hover > .red {
+.my-name:hover > .red { /* o mesmo se aplica a este, e ao debaixo*/
     color: #AD6D64;
 }
 
@@ -172,7 +172,7 @@ a {
   padding-left: 10%;
   padding-right: 10%;
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1199px) {
     flex-direction: column;
   }
 }
@@ -202,7 +202,7 @@ a {
 
 .contact h2 {
   color: #7ca982;
-  font-size: 60px; /* medida utilizada ao inves de px pois tive problemas ao testar em outros computadores, e esta foi a versao que melhor se adaptou */
+  font-size: 60px;
 
   @media only screen and (max-width: 1199px) {
     font-size: 2rem;
@@ -224,7 +224,7 @@ a {
 }
 
 .section {
-  padding-bottom: 10vh; 
+  padding-bottom: 10vh; /* define padding com o valor de 10% da altura da tela. vh pode ser usada para definir valores relativos a altura da tela */
 
   @media only screen and (min-width: 1200px) {
     height: 90vh;
@@ -233,8 +233,8 @@ a {
 }
 
 img {
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
+  opacity: 0; /* esconde todas as imagens quando a pagina é carregada*/
+  transition: opacity 2s ease-in-out; /* configura o tipo de animação para as imagens aparecerem*/
 }
 
 .fa-instagram {
@@ -256,14 +256,13 @@ img {
 }
 
 .work h1 {
-    position: absolute;
-    top: -35px;
+    position: absolute; /*tira o elemento do DOM flow geral, isto faz com que os elementos não seja mais relativo aos outros elementos*/
+    top: -35px; /*valores top, right, left e bottom são usados para definir a posição do elemento enquanto em posição absoluta*/
     right: 0px;
-    margin: 0px;
+    margin: 0px; /*remove margens padrões que preexistem nos elementos H1*/
     color: #f1f7ed;
     font-size: 150px;
-    z-index: 2;
-    text-transform: uppercase;
+    text-transform: uppercase; /*usei para testar deixar todas letras em maiusculas*/
 
     @media only screen and (max-width: 1199px) {
       font-size: 64px;
@@ -273,9 +272,9 @@ img {
 
 .work .content {
     padding: 0px;
-    margin-left: auto;
+    margin-left: auto; /*margem auto usadas para centralizar o elemento*/
     margin-right: auto;
-    position: relative;
+    position: relative;/*aqui tive que especialmente definir isto para criar limites para as imagens dos meus projetos não invadirem o espaço de cima da página, respeitando os limites do container*/
 
     @media only screen and (min-width: 1200px) {
       width: 1200px;
@@ -284,49 +283,45 @@ img {
 
 .work .card {
     position: absolute;
-    box-shadow: 0 70px 63px -60px #494848;
-    transform-style: preserve-3d;
-    transition: transform .05s linear;
 
     @media only screen and (max-width: 1199px) {
-      position: relative;
+      position: relative; /*em dispositivos mobile, as imagens dos projetos são apresentadas em linha vertical, um abaixo do outro*/
     }
 }
 
 .work .card-wrapper {
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
+    opacity: 0; /*configura a visibilidade das imagens a 0*/
+    transition: opacity 2s ease-in-out; /*animação para criar efeito smooth de transição entre as sessões*/
 
     @media only screen and (max-width: 1199px) {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 20px; /*define o espaço entre os elementos flex*/
     }
 }
 
-.card:hover a > .card-background {
-    animation: brightnessAnimation .5s linear forwards;
+.card:hover a > .card-background { /*seleciona card-background ao passar o mouse sobre a imagem do projeto. Isto é necessário para que somente a imagem fique escura, mas não o seu conteúdo, neste caso: texto*/
+    animation: reduceBrightnessAnimation .5s linear forwards; /* ao passar o mouse sobre o projeto, esta animação faz com que a imagem fique mais escura */
 }
 
 .card:hover {
-    animation: zIndexAnimation .5s linear forwards;
-    cursor: pointer;
+    animation: zIndexAnimation .5s linear forwards; /*esta animação faz com que ao passar o mouse sobre uma imagem do projeto, a mesma é destacada e trazida para frente*/
+    cursor: pointer; /*muda o mouse ao passar pela imagem do projeto*/
 }
 
 .work .card-background {
-    background-size: cover;
+    background-size: cover; /*define o tamanho da imagem */
     height: 100%;
     width: 100%;
-    border-radius: 5px;
-    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px; /*arredonda as bordas da imagem*/
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.15); /* adiciona dropshadow nas imagens dos projetos*/
 }
 
 .work p {
     position: absolute;
     font-size: 20px;
-    font-weight: 100;
-    transform: translateZ(80px);
+    font-weight: 100; 
     color: white;
     padding: 40px;
     bottom: 0px;
@@ -340,9 +335,11 @@ img {
 
 .work .card:hover p {
   @media only screen and (min-width: 1200px) {
-    animation: appearText .5s linear forwards;
+    animation: appearTextAnimation .5s linear forwards;  /*esta animação faz com que o texto apareça ao passar o mouse sobre a imagem, disponível apenas para desktop*/
   }
 }
+
+/*disposição das imagens na sessão de projetos*/
 
 .work .card-1 {
     width: 400px;
@@ -467,9 +464,9 @@ img {
     }
 }
 
+/*animações*/
 
-
-@keyframes brightnessAnimation {
+@keyframes reduceBrightnessAnimation {
   0% {
       filter: brightness(100%);
   }
@@ -487,7 +484,7 @@ img {
   }
 }
 
-@keyframes appearText {
+@keyframes appearTextAnimation {
   0% {
       opacity: 0%;
   }
@@ -499,8 +496,8 @@ img {
 /*pagina project individual*/
 
 .project-body {
-    @media only screen and (min-width: 1201px) {
-      overflow: hidden;
+    @media only screen and (min-width: 1200px) {
+      overflow: hidden;/*desativa scrollling total da página em desktop*/
     }
 }
 
@@ -509,7 +506,7 @@ img {
     padding-top: 100px;
     display: flex;
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1199px) {
       flex-direction: column;
     }
 }
@@ -519,7 +516,7 @@ img {
 }
 
 .project-content .images-container{
-    overflow: auto;
+    overflow: auto; /*abilita scrolling das images do projeto*/
     max-height: 80vh;
     flex: 2;
 }
@@ -566,6 +563,7 @@ img {
   margin: 0px;
 }
 
+/*cores individuais das paginas dos projetos*/
 .daterate {
     background-color: #F6EEED;
 }
